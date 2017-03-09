@@ -15,7 +15,7 @@ class ItemsViewController: UITableViewController
     var itemStore: ItemStore!
 
     
-    // Editing
+    // Editing button 
     @IBAction func toggleEditingMode(sender: AnyObject)
     {
         if isEditing
@@ -32,7 +32,7 @@ class ItemsViewController: UITableViewController
     
     }
     
-    // Add
+    // Add button
     @IBAction func addNewItem(sender: AnyObject)
     {
         // Create a new item and add it to the store
@@ -49,8 +49,32 @@ class ItemsViewController: UITableViewController
         }
     }
     
+    // Delete
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        // If the table view is asking to commit a delete command
+        if editingStyle == .delete
+        {
+            let item = itemStore.allItems[indexPath.row]
+            // Remove the item from the store
+            itemStore.removeItem(item: item)
+            
+            // Remove that row from the table view with an animation
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    } // end delete
+
    
+    // Move 
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
+        // Update the model
+        itemStore.moveItemAtIndex(fromIndex: sourceIndexPath.row, toIndex: destinationIndexPath.row)
+    }
     
+    
+    
+    // Do this when the view first loads
     override func viewDidLoad()
     {
         super.viewDidLoad()
