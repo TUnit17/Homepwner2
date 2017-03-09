@@ -38,7 +38,7 @@ class ItemsViewController: UITableViewController
         // Create a new item and add it to the store
         let newItem = itemStore.createItem()
         
-        // Figure out where that item is in the array
+        // Figure out where that item is in the array›
         if let index = itemStore.allItems.index(of: newItem)
         {
             let indexPath = NSIndexSet(forRow: index, inSection: 0)
@@ -47,9 +47,6 @@ class ItemsViewController: UITableViewController
             tableView.insertRows(at: indexPath, with: .automatic)
 
         }
-        
-        
-        
     }
     
    
