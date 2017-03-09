@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		070A19CA1E6FCAB500851D03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070A19C91E6FCAB500851D03 /* AppDelegate.swift */; };
-		070A19CC1E6FCAB500851D03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070A19CB1E6FCAB500851D03 /* ViewController.swift */; };
 		070A19CF1E6FCAB500851D03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070A19CD1E6FCAB500851D03 /* Main.storyboard */; };
 		070A19D11E6FCAB500851D03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 070A19D01E6FCAB500851D03 /* Assets.xcassets */; };
 		070A19D41E6FCAB500851D03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070A19D21E6FCAB500851D03 /* LaunchScreen.storyboard */; };
+		070A19DC1E6FCAFA00851D03 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070A19DB1E6FCAFA00851D03 /* ItemsViewController.swift */; };
+		070A19DE1E6FCBAB00851D03 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070A19DD1E6FCBAB00851D03 /* Item.swift */; };
+		070A19E01E6FCDFD00851D03 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070A19DF1E6FCDFD00851D03 /* ItemStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		070A19C61E6FCAB500851D03 /* Homepwner2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		070A19C91E6FCAB500851D03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		070A19CB1E6FCAB500851D03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		070A19CE1E6FCAB500851D03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		070A19D01E6FCAB500851D03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		070A19D31E6FCAB500851D03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		070A19D51E6FCAB500851D03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		070A19DB1E6FCAFA00851D03 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		070A19DD1E6FCBAB00851D03 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		070A19DF1E6FCDFD00851D03 /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				070A19C91E6FCAB500851D03 /* AppDelegate.swift */,
-				070A19CB1E6FCAB500851D03 /* ViewController.swift */,
 				070A19CD1E6FCAB500851D03 /* Main.storyboard */,
 				070A19D01E6FCAB500851D03 /* Assets.xcassets */,
 				070A19D21E6FCAB500851D03 /* LaunchScreen.storyboard */,
 				070A19D51E6FCAB500851D03 /* Info.plist */,
+				070A19DB1E6FCAFA00851D03 /* ItemsViewController.swift */,
+				070A19DD1E6FCBAB00851D03 /* Item.swift */,
+				070A19DF1E6FCDFD00851D03 /* ItemStore.swift */,
 			);
 			path = Homepwner2;
 			sourceTree = "<group>";
@@ -136,7 +142,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				070A19CC1E6FCAB500851D03 /* ViewController.swift in Sources */,
+				070A19DC1E6FCAFA00851D03 /* ItemsViewController.swift in Sources */,
+				070A19DE1E6FCBAB00851D03 /* Item.swift in Sources */,
+				070A19E01E6FCDFD00851D03 /* ItemStore.swift in Sources */,
 				070A19CA1E6FCAB500851D03 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
