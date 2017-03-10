@@ -22,15 +22,15 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c07-Y1-iMu">
-                                    <rect key="frame" x="312" y="6" width="46" height="30"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c07-Y1-iMu">
+                                    <rect key="frame" x="341" y="6" width="30" height="30"/>
                                     <state key="normal" title="Add"/>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95b-G8-h89">
-                                    <rect key="frame" x="15" y="6" width="46" height="30"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95b-G8-h89">
+                                    <rect key="frame" x="4" y="6" width="30" height="30"/>
                                     <state key="normal" title="Edit"/>
                                     <connections>
-                                        <action selector="toggleEditingModeWithSender:" destination="vGl-Xb-Rij" eventType="touchUpInside" id="186-iO-yfk"/>
+                                        <action selector="toggleEditingModeWithSender:" destination="vGl-Xb-Rij" eventType="touchUpInside" id="Zp9-27-9mc"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -38,7 +38,7 @@
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="c07-Y1-iMu" secondAttribute="trailing" constant="4" id="6Og-jp-CZs"/>
                                 <constraint firstItem="c07-Y1-iMu" firstAttribute="width" secondItem="95b-G8-h89" secondAttribute="width" id="6Pe-tv-S5T"/>
-                                <constraint firstItem="c07-Y1-iMu" firstAttribute="leading" secondItem="95b-G8-h89" secondAttribute="trailing" constant="8" id="hAI-9J-pNq"/>
+                                <constraint firstItem="95b-G8-h89" firstAttribute="bottom" secondItem="LW6-wm-iDf" secondAttribute="bottomMargin" id="YgQ-63-duS"/>
                                 <constraint firstItem="c07-Y1-iMu" firstAttribute="centerY" secondItem="95b-G8-h89" secondAttribute="centerY" id="prK-lm-2nJ"/>
                                 <constraint firstItem="95b-G8-h89" firstAttribute="leading" secondItem="LW6-wm-iDf" secondAttribute="leading" constant="4" id="w7O-IP-wZH"/>
                             </constraints>
@@ -48,7 +48,7 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qan-WO-d6r" id="cXP-YJ-acY">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1h2-hm-ENW">
