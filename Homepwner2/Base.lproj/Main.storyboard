@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,9 +25,6 @@
                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c07-Y1-iMu">
                                     <rect key="frame" x="312" y="6" width="46" height="30"/>
                                     <state key="normal" title="Add"/>
-                                    <connections>
-                                        <action selector="addNewItemWithSender:" destination="vGl-Xb-Rij" eventType="touchUpInside" id="GIm-KO-SN5"/>
-                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95b-G8-h89">
                                     <rect key="frame" x="15" y="6" width="46" height="30"/>
@@ -46,28 +44,40 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="Vwo-M6-zRc" detailTextLabel="gfl-uf-Xzq" style="IBUITableViewCellStyleValue1" id="Qan-WO-d6r">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="65" id="Qan-WO-d6r">
+                                <rect key="frame" x="0.0" y="72" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qan-WO-d6r" id="cXP-YJ-acY">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vwo-M6-zRc">
-                                            <rect key="frame" x="15" y="11" width="34" height="21"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1h2-hm-ENW">
+                                            <rect key="frame" x="8" y="8" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gfl-uf-Xzq">
-                                            <rect key="frame" x="316" y="11" width="44" height="21"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diM-q6-QA2">
+                                            <rect key="frame" x="8" y="38" width="37.5" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlb-US-3hO">
+                                            <rect key="frame" x="325" y="22" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="rlb-US-3hO" secondAttribute="trailing" id="AB2-yA-Grc"/>
+                                        <constraint firstItem="1h2-hm-ENW" firstAttribute="top" secondItem="cXP-YJ-acY" secondAttribute="topMargin" id="Pfm-up-ihH"/>
+                                        <constraint firstItem="1h2-hm-ENW" firstAttribute="leading" secondItem="cXP-YJ-acY" secondAttribute="leadingMargin" id="UdT-rK-eYt"/>
+                                        <constraint firstItem="diM-q6-QA2" firstAttribute="leading" secondItem="1h2-hm-ENW" secondAttribute="leading" id="VHB-bI-Rul"/>
+                                        <constraint firstItem="rlb-US-3hO" firstAttribute="centerY" secondItem="cXP-YJ-acY" secondAttribute="centerY" id="XYc-GG-cQj"/>
+                                        <constraint firstItem="diM-q6-QA2" firstAttribute="bottom" secondItem="cXP-YJ-acY" secondAttribute="bottomMargin" id="lCJ-zs-cPh"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
