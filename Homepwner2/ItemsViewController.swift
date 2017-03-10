@@ -56,11 +56,32 @@ class ItemsViewController: UITableViewController
         if editingStyle == .delete
         {
             let item = itemStore.allItems[indexPath.row]
-            // Remove the item from the store
-            itemStore.removeItem(item: item)
             
-            // Remove that row from the table view with an animation
-            tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            // *************************Display user alert with .ActionSheet
+            let title = "Delete \(item.name) ?"
+            let message = "Are you sure you want to delete this item?"
+            
+            let ac = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler : nil)
+            ac.addAction(cancelAction)
+            
+            //let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: (UIAlertAction) -> Void)? = nil)
+            let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: {(ACTION) -> Void in
+                
+                // Remove the item from the store
+                self.itemStore.removeItem(item: item)
+
+                // Remove that row from the table view with an animation
+                self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            })
+            
+            ac.addAction(deleteAction)
+            
+            // Present the alert controller
+            present(ac, animated: true, completion: nil)
         }
     } // end delete
 
